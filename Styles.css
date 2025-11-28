@@ -23,6 +23,8 @@ img, video {
     height: auto;
     display: block;
 }
+
+
 .bg-video {
     position: fixed;  
     top: 0;
@@ -32,6 +34,8 @@ img, video {
     object-fit: cover;     
     z-index: -1;          
 }
+
+
 .navbar {
     position: fixed;
     top: 0;
