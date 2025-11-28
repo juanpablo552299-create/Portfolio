@@ -29,10 +29,13 @@ img, video {
     position: fixed;  
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100vw;       
     height: 100vh;       
     object-fit: cover;     
-    z-index: -1;          
+    z-index: -1;         
+    pointer-events: none; /* allow clicks through the video */
 }
 
 
@@ -41,7 +44,8 @@ img, video {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 20; /* sit above the video and overlay */
+    background: rgba(0,196,55,0.95); /* keeps the navbar readable over the video */
 }
 
 .hero-image-box::after {
@@ -67,4 +71,24 @@ img, video {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+/* overlay between the video and page content to improve contrast */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.25);
+    z-index: 0; /* above video (-1), below content (>=10) */
+    pointer-events: none;
+}
+
+/* main content should sit above the overlay */
+.site-content {
+    position: relative;
+    z-index: 10;
 }
