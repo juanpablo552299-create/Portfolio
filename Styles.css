@@ -1,8 +1,12 @@
-/* basic reset & box-sizing */
-*, *::before, *::after { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+/*basic styles */
+html {
+    font-size: 100%;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
 
-/* keep your original body width behavior */
 body {
     margin: 0 auto;
     padding: 0;
@@ -10,79 +14,82 @@ body {
     max-width: 100%;
 }
 
-/* --- IMAGES: scoped so we don't accidentally scale everything --- */
-/* Images inside your content area will be responsive */
-.site-content img {
-    max-width: 100%;
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+img, video {
+    width: 100%;
     height: auto;
     display: block;
 }
 
-/* specifically style your logo image so it keeps intended pixel height */
-.site-logo {
-    width: auto;        /* allow natural width */
-    height: 400px;      /* keep your original visual size */
-    display: block;
-    max-width: 100%;
-}
 
-/* FULLSCREEN BACKGROUND VIDEO */
 .bg-video {
-    position: fixed;
-    inset: 0;            /* top:0; right:0; bottom:0; left:0; */
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -999;       /* far behind content */
-    pointer-events: none;
-    background: black;
+    position: fixed;  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;       
+    height: 100vh;       
+    object-fit: cover;     
+    z-index: -1;         
+    pointer-events: none; 
 }
 
-/* overlay to improve contrast (above video, below content) */
-.video-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.25);
-    z-index: -10;        /* above video (-999) but below content */
-    pointer-events: none;
-}
 
-/* NAVBAR: explicitly on top */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;       /* ensure it always sits above overlay & content */
-    background: rgba(0,196,55,0.95); /* keep your green look */
-    border-collapse: collapse;
+    z-index: 20; 
+    background: rgba(0,196,55,0.95); 
 }
 
-/* keep the table layout as you had it */
-.navbar table { width: 100%; }
-.navbar th, .navbar td { padding: 12px 16px; vertical-align: middle; }
+.hero-image-box::after {
+    content: "";
+    background-color: #00C437;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
 
-/* main content stacked above overlay */
+.hero-image, 
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-video {
+    background-color: #000;
+    background-image: url(video/Fantasy.mp4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.25);
+    z-index: 0; 
+    pointer-events: none;
+}
+
+
 .site-content {
     position: relative;
     z-index: 10;
-    padding-top: 80px;  /* prevents navbar covering top content — adjust if needed */
 }
 
-/* keep text readable on top of the overlay/video */
-.site-content h1, .site-content p, .site-content font {
-    color: #ffffff;
-}
-
-/* keep any other hero-image rules harmless */
-.hero-image-box::after {
-    content: "";
-    /* preserved for layout compatibility — no visual blocking */
-    display: none;
-}
-
-/* small responsive tweak: disable video on small screens to save data */
-@media (max-width: 600px) {
-    .bg-video, .video-overlay { display: none; }
-    .site-logo { height: 300px; } /* slightly smaller logo on mobile */
-}
