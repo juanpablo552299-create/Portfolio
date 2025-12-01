@@ -1,59 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Video Background</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
 
-  <!-- link to the CSS above -->
-  <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="images/Logo.jpg">
+
+    <style>
+        body{
+            background-color:#e8feee;
+        }
+
+        .img{
+            border-radius: 50%;   
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <table class="navbar" role="navigation" aria-label="Main navigation">
-    <tr>
-      <th>
-        <table width="85%" align="center" cellpadding="0" cellspacing="0">
-          <tr>
-            <th style="text-align:left"><span style="font-size:1.5rem;color:#fff">JPGR</span></th>
-            <td style="text-align:right">
-              <a href="Portfolio.html" style="color:#fff; text-decoration:none; margin-right:18px;">Portfolio</a>
-              <a href="Specialism.html" style="color:#fff; text-decoration:none; margin-right:18px;">Specialism</a>
-              <a href="About_Me.html" style="color:#fff; text-decoration:none; margin-right:18px;">About Me</a>
-              <a href="Contact.html" style="color:#fff; text-decoration:none;">Contact</a>
-            </td>
-          </tr>
-        </table>
-      </th>
-    </tr>
-  </table>
+    <!-- navbar -->
+    <table width="100%" bgcolor="#00C437" class="navbar">
+        <tr>
+            <th>
+                <table border="0" width="85%" align="center" cellpadding="15">
+                    <tr>
+                        <th>
+                            <font face="Open Sans" size="6" color="white"> JPGR </font>
+                        </th>
+                        <th width="20%"></th>
+                        <th> <a href="Portfolio.html" style="text-decoration:none;">
+                              <font face="Open Sans" size="4" color="white"> Portfolio </font>
+                            </a></th>
+                        <th> <a href="Specialism.html" style="text-decoration:none;">
+                               <font face="Open Sans" size="4" color="white"> Specialism </font>
+                            </a></th>
+                        <th> <a href="About_Me.html" style="text-decoration:none;">
+                                <font face="Open Sans" size="4" color="white"> About Me </font>
+                            </a></th>
+                        <th> <a href="Contact.html" style="text-decoration:none;">
+                                <font face="Open Sans" size="4" color="white"> Contact Me</font>
+                            </a></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </table>
+    <!-- end navbar -->
+    <!-- Home -->
+    <table width="100%" class="site-content">
+        <tr>
+            <th>
+                <table width="85%" border="0" align="center" cellpadding="80">
+                    <tr>
+                        <td width="50%">
+                            <h1 align="left">
+                                <font face="Open Sans" size="7"> Hi </font>
+                            </h1>
+                             <h1 align="left">
+                                <font face="Open Sans" size="5"> Welcome to JPGR </font>
+                            </h1>
+                             <p align="left">
+                                <font face="Open Sans" size="3">
+                                    I am an enthusiastic games design student with multiple different 
+                                    skills in game development
+                                </font>
 
-  <!-- PAGE CONTENT -->
-  <main class="site-content">
-    <section style="width:85%; margin:0 auto; padding:4rem 0;">
-      <div style="display:flex; gap:2rem; align-items:center; flex-wrap:wrap;">
-        <div style="flex:1 1 320px;">
-          <h1>Hi</h1>
-          <h2>Welcome to JPGR</h2>
-          <p>I am an enthusiastic games design student with multiple different skills in game development.</p>
-        </div>
-        <div style="flex:0 0 400px;">
-          <img class="site-img logo-img" src="images/LogoCut.png" alt="logo">
-        </div>
-      </div>
-    </section>
-  </main>
+                            </p>
+                        </td>
+                        <td>
 
-  <!-- BACKGROUND VIDEO (make sure path is correct) -->
-  <video class="bg-video" autoplay muted loop playsinline preload="auto">
-    <source src="videos/Fantasy.mp4" type="video/mp4">
-    <!-- Fallback text for very old browsers -->
-    Your browser does not support HTML5 video.
-  </video>
-
-  <!-- OVERLAY -->
-  <div class="video-overlay" aria-hidden="true"></div>
+                            <img class="image/png" src="images/LogoCut.png" alt="me" height="400px">
+                        </td>
+                          
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </table>
+    <!-- End Home -->
+    <video autoplay muted loop playsinline preload="auto" class="bg-video" poster="images/poster.jpg" aria-hidden="true">
+        <source src="videos/Fantasy.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay" aria-hidden="true"></div>
 
 </body>
 </html>
