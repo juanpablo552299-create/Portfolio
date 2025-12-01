@@ -7,85 +7,60 @@
 
     <link rel="icon" type="image/jpg" href="images/Logo.jpg">
 
-    <style>
-        body{
-            background-color:#e8feee;
-        }
-
-        .img{
-            border-radius: 50%;   
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="style.css"> <!-- Make sure your CSS file name matches -->
 </head>
 
 <body>
 
     <!-- navbar -->
-    <table width="100%" bgcolor="#00C437" class="navbar">
+    <table width="100%" class="navbar">
         <tr>
             <th>
                 <table border="0" width="85%" align="center" cellpadding="15">
                     <tr>
-                        <th>
-                            <font face="Open Sans" size="6" color="white"> JPGR </font>
-                        </th>
+                        <th><font size="6" color="white">JPGR</font></th>
                         <th width="20%"></th>
-                        <th> <a href="Portfolio.html" style="text-decoration:none;">
-                              <font face="Open Sans" size="4" color="white"> Portfolio </font>
-                            </a></th>
-                        <th> <a href="Specialism.html" style="text-decoration:none;">
-                               <font face="Open Sans" size="4" color="white"> Specialism </font>
-                            </a></th>
-                        <th> <a href="About_Me.html" style="text-decoration:none;">
-                                <font face="Open Sans" size="4" color="white"> About Me </font>
-                            </a></th>
-                        <th> <a href="Contact.html" style="text-decoration:none;">
-                                <font face="Open Sans" size="4" color="white"> Contact Me</font>
-                            </a></th>
+                        <th><a href="Portfolio.html" style="text-decoration:none;"><font size="4" color="white">Portfolio</font></a></th>
+                        <th><a href="Specialism.html" style="text-decoration:none;"><font size="4" color="white">Specialism</font></a></th>
+                        <th><a href="About_Me.html" style="text-decoration:none;"><font size="4" color="white">About Me</font></a></th>
+                        <th><a href="Contact.html" style="text-decoration:none;"><font size="4" color="white">Contact Me</font></a></th>
                     </tr>
                 </table>
             </th>
         </tr>
     </table>
     <!-- end navbar -->
-    <!-- Home -->
+
+    <!-- Home section -->
     <table width="100%" class="site-content">
         <tr>
             <th>
                 <table width="85%" border="0" align="center" cellpadding="80">
                     <tr>
                         <td width="50%">
-                            <h1 align="left">
-                                <font face="Open Sans" size="7"> Hi </font>
-                            </h1>
-                             <h1 align="left">
-                                <font face="Open Sans" size="5"> Welcome to JPGR </font>
-                            </h1>
-                             <p align="left">
-                                <font face="Open Sans" size="3">
-                                    I am an enthusiastic games design student with multiple different 
-                                    skills in game development
-                                </font>
-
+                            <h1 align="left">Hi</h1>
+                            <h1 align="left">Welcome to JPGR</h1>
+                            <p align="left">
+                                I am an enthusiastic games design student with multiple
+                                different skills in game development.
                             </p>
                         </td>
                         <td>
-
-                            <img class="image/png" src="images/LogoCut.png" alt="me" height="400px">
+                            <img src="images/LogoCut.png" alt="me" height="400px">
                         </td>
-                          
                     </tr>
                 </table>
             </th>
         </tr>
     </table>
-    <!-- End Home -->
-    <video autoplay muted loop playsinline preload="auto" class="bg-video" poster="images/poster.jpg" aria-hidden="true">
+
+    <!-- Fullscreen background video -->
+    <video autoplay muted loop playsinline preload="auto" class="bg-video">
         <source src="videos/Fantasy.mp4" type="video/mp4">
     </video>
-    <div class="video-overlay" aria-hidden="true"></div>
+
+    <!-- Overlay above video -->
+    <div class="video-overlay"></div>
 
 </body>
-</html>   
+</html>
