@@ -1,91 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-
-    <link rel="icon" type="image/jpg" href="images/Logo.jpg">
-
-    <style>
-        body{
-            background-color:#e8feee;
-        }
-
-        .img{
-            border-radius: 50%;   
-        }
-
-    </style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="icon" type="image/jpg" href="images/Logo.jpg">
+  <!-- If you're using external CSS, update the href; otherwise paste the CSS above into a <style> block here -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- navbar -->
-    <table width="100%" bgcolor="#00C437" class="navbar">
-        <tr>
+  <!-- navbar -->
+  <table width="100%" bgcolor="#00C437" class="navbar">
+    <tr>
+      <th>
+        <table border="0" width="85%" align="center" cellpadding="15">
+          <tr>
             <th>
-                <table border="0" width="85%" align="center" cellpadding="15">
-                    <tr>
-                        <th>
-                            <font face="Open Sans" size="6" color="white"> JPGR </font>
-                        </th>
-                        <th width="20%"></th>
-                        <th> <a href="Portfolio.html" style="text-decoration:none;">
-                              <font face="Open Sans" size="4" color="white"> Portfolio </font>
-                            </a></th>
-                        <th> <a href="Specialism.html" style="text-decoration:none;">
-                               <font face="Open Sans" size="4" color="white"> Specialism </font>
-                            </a></th>
-                        <th> <a href="About_Me.html" style="text-decoration:none;">
-                                <font face="Open Sans" size="4" color="white"> About Me </font>
-                            </a></th>
-                        <th> <a href="Contact.html" style="text-decoration:none;">
-                                <font face="Open Sans" size="4" color="white"> Contact Me</font>
-                            </a></th>
-                    </tr>
-                </table>
+              <font face="Open Sans" size="6" color="white"> JPGR </font>
             </th>
-        </tr>
-    </table>
-    <!-- end navbar -->
-    <!-- Home -->
-    <table width="100%" class="site-content">
-        <tr>
-            <th>
-                <table width="85%" border="0" align="center" cellpadding="80">
-                    <tr>
-                        <td width="50%">
-                            <h1 align="left">
-                                <font face="Open Sans" size="7"> Hi </font>
-                            </h1>
-                             <h1 align="left">
-                                <font face="Open Sans" size="5"> Welcome to JPGR </font>
-                            </h1>
-                             <p align="left">
-                                <font face="Open Sans" size="3">
-                                    I am an enthusiastic games design student with multiple different 
-                                    skills in game development
-                                </font>
+            <th width="20%"></th>
+            <th> <a href="Portfolio.html" style="text-decoration:none;">
+                  <font face="Open Sans" size="4" color="white"> Portfolio </font>
+                </a></th>
+            <th> <a href="Specialism.html" style="text-decoration:none;">
+                   <font face="Open Sans" size="4" color="white"> Specialism </font>
+                </a></th>
+            <th> <a href="About_Me.html" style="text-decoration:none;">
+                    <font face="Open Sans" size="4" color="white"> About Me </font>
+                </a></th>
+            <th> <a href="Contact.html" style="text-decoration:none;">
+                    <font face="Open Sans" size="4" color="white"> Contact Me</font>
+                </a></th>
+          </tr>
+        </table>
+      </th>
+    </tr>
+  </table>
+  <!-- end navbar -->
 
-                            </p>
-                        </td>
-                        <td>
+  <!-- Home -->
+  <table width="100%" class="site-content">
+    <tr>
+      <th>
+        <table width="85%" border="0" align="center" cellpadding="80">
+          <tr>
+            <td width="50%">
+              <h1 align="left">
+                <font face="Open Sans" size="7"> Hi </font>
+              </h1>
+              <h1 align="left">
+                <font face="Open Sans" size="5"> Welcome to JPGR </font>
+              </h1>
+              <p align="left">
+                <font face="Open Sans" size="3">
+                  I am an enthusiastic games design student with multiple different 
+                  skills in game development
+                </font>
+              </p>
+            </td>
+            <td>
+              <!-- changed class to site-logo so CSS can keep it at the intended size -->
+              <img class="site-logo" src="images/LogoCut.png" alt="me" />
+            </td>
+          </tr>
+        </table>
+      </th>
+    </tr>
+  </table>
+  <!-- End Home -->
 
-                            <img class="image/png" src="images/LogoCut.png" alt="me" height="400px">
-                        </td>
-                          
-                    </tr>
-                </table>
-            </th>
-        </tr>
-    </table>
-    <!-- End Home -->
-    <video autoplay muted loop playsinline preload="auto" class="bg-video" poster="images/poster.jpg" aria-hidden="true">
-        <source src="videos/Fantasy.mp4" type="video/mp4">
-    </video>
-    <div class="video-overlay" aria-hidden="true"></div>
+  <!-- Background video (unchanged) -->
+  <video autoplay muted loop playsinline preload="auto" class="bg-video" poster="images/poster.jpg" aria-hidden="true">
+    <source src="videos/Fantasy.mp4" type="video/mp4">
+  </video>
+
+  <div class="video-overlay" aria-hidden="true"></div>
 
 </body>
 </html>
